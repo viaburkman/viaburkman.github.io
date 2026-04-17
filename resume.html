@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Resume</title>
+  <title>Resume | Olivia B</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-  const cards = document.querySelectorAll('.card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  cards.forEach(card => observer.observe(card));
-</script>
 
 <body>
 
@@ -30,9 +16,86 @@
 </nav>
 
 <section>
-  <h2>📄 Resume</h2>
-  <a href="resume.pdf" class="btn">Download Resume</a>
+
+  <!-- HERO HEADER -->
+  <div style="text-align:center; padding-bottom:40px;">
+    <h1 style="margin-bottom:10px;">Resume</h1>
+    <p style="color:#9ca3af; max-width:600px; margin:auto;">
+      Clean overview of my skills, experience, and technical background in cybersecurity, data analysis, and operations.
+    </p>
+
+    <a href="resume.pdf" class="btn" style="margin-top:20px;">
+      Download PDF Version
+    </a>
+  </div>
+
+  <!-- GRID LAYOUT -->
+  <div class="grid">
+
+    <!-- PROFILE -->
+    <div class="card">
+      <h2>👤 Profile</h2>
+      <p>
+        Aspiring cybersecurity and data analyst with a strong foundation in organization, communication, and technical problem-solving. 
+        I combine structured thinking with creative design skills to build clear, effective solutions.
+      </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+      <h2>🧠 Skills</h2>
+      <p>
+        • Python programming (logic, file handling, data structures)<br>
+        • Data organization & analysis<br>
+        • Administrative coordination<br>
+        • Customer communication & problem-solving<br>
+        • Visual design using Canva
+      </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="card">
+      <h2>💼 Experience</h2>
+      <p>
+        <strong>Administrative Assistant</strong><br>
+        Managed scheduling, documentation, and internal coordination with high attention to detail.
+      </p>
+
+      <p>
+        <strong>Customer-Facing Roles</strong><br>
+        Developed communication, adaptability, and multitasking in fast-paced environments.
+      </p>
+
+      <p>
+        <strong>Design Work</strong><br>
+        Created promotional and marketing visuals used for engagement and branding.
+      </p>
+    </div>
+
+    <!-- PROJECTS SNAPSHOT -->
+    <div class="card">
+      <h2>💻 Technical Work</h2>
+      <p>
+        Built Python-based systems including route simulation and hazard logic engines using structured data and modular design.
+      </p>
+      <a href="projects.html" class="btn">View Projects</a>
+    </div>
+
+    <!-- EDUCATION / GOALS -->
+    <div class="card">
+      <h2>🎯 Focus</h2>
+      <p>
+        Currently developing deeper expertise in cybersecurity fundamentals, data systems, and applied programming with the goal of entering a technical internship role.
+      </p>
+    </div>
+
+  </div>
+
 </section>
+
+<footer>
+  <p>© 2026 Olivia B.</p>
+</footer>
 
 </body>
 </html>
