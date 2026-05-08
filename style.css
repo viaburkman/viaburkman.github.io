@@ -2,16 +2,14 @@
 
 /* ================= HERO WRAPPER CENTER FIX ================= */
 .hero-wrapper {
-  min-height: calc(100vh - 70px); /* accounts for nav */
+  min-height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 40px 20px;
-  box-sizing: border-box;
 }
 
-/* inner container */
 .hero {
   max-width: 700px;
   display: flex;
@@ -20,24 +18,114 @@
   gap: 14px;
 }
 
-/* title */
 .hero h1 {
+  font-size: 48px;
   margin: 0;
-  font-size: 42px;
 }
 
-/* subtitle */
 .subtitle {
   color: #f9a8d4;
   font-weight: 500;
-  margin: 0;
 }
 
-/* paragraph */
 .hero-text {
   color: #9ca3af;
   max-width: 600px;
+}
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  max-width: 800px;
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 18px;
+  padding: 30px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.about-card:hover {
+  border-color: #f9a8d4;
+  box-shadow: 0 0 25px rgba(249,168,212,0.2);
+  transform: translateY(-4px);
+}
+
+/* divider */
+.pink-divider {
+  width: 60px;
+  height: 3px;
+  background: #f9a8d4;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+
+/* highlights row */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.highlight {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.highlight:hover {
+  border-color: #f9a8d4;
+  transform: translateY(-3px);
+}
+
+.highlight h3 {
   margin: 0;
+  color: #f9a8d4;
+  font-size: 16px;
+}
+
+.highlight p {
+  margin: 6px 0 0;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* ================= CENTER SECTION ================= */
+.center-section {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ================= BUTTON POLISH ================= */
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid #1f1f1f;
+  color: #f5f5f5;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  background: #f9a8d4;
+  color: black;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: #f9a8d4;
 }
 
 /* buttons spacing */
