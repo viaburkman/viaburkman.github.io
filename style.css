@@ -1,25 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-header {
-  width: 100%;
-  min-height: calc(100vh - 60px); /* accounts for nav */
+/* ================= HERO WRAPPER CENTER FIX ================= */
+.hero-wrapper {
+  min-height: calc(100vh - 70px); /* accounts for nav */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   padding: 40px 20px;
   box-sizing: border-box;
 }
 
-header h1 {
+/* inner container */
+.hero {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* title */
+.hero h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+/* subtitle */
+.subtitle {
+  color: #f9a8d4;
+  font-weight: 500;
   margin: 0;
 }
 
-header p {
-  max-width: 600px;
+/* paragraph */
+.hero-text {
   color: #9ca3af;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* buttons spacing */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* mobile fix */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
 }
 
 /* ================= BASE ================= */
