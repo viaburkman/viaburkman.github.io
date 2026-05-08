@@ -1,151 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
-/* ================= HERO WRAPPER CENTER FIX ================= */
-.hero-wrapper {
-  min-height: calc(100vh - 70px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero {
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin: 0;
-}
-
-.subtitle {
-  color: #f9a8d4;
-  font-weight: 500;
-}
-
-.hero-text {
-  color: #9ca3af;
-  max-width: 600px;
-}
-
-/* ================= ABOUT SECTION ================= */
-.about-section {
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-card {
-  max-width: 800px;
-  background: #111;
-  border: 1px solid #1f1f1f;
-  border-radius: 18px;
-  padding: 30px;
-  transition: 0.3s ease;
-  position: relative;
-}
-
-.about-card:hover {
-  border-color: #f9a8d4;
-  box-shadow: 0 0 25px rgba(249,168,212,0.2);
-  transform: translateY(-4px);
-}
-
-/* divider */
-.pink-divider {
-  width: 60px;
-  height: 3px;
-  background: #f9a8d4;
-  margin: 10px 0 20px;
-  border-radius: 10px;
-}
-
-/* highlights row */
-.about-highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.highlight {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid #1f1f1f;
-  border-radius: 14px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.highlight:hover {
-  border-color: #f9a8d4;
-  transform: translateY(-3px);
-}
-
-.highlight h3 {
-  margin: 0;
-  color: #f9a8d4;
-  font-size: 16px;
-}
-
-.highlight p {
-  margin: 6px 0 0;
-  color: #9ca3af;
-  font-size: 13px;
-}
-
-/* ================= CENTER SECTION ================= */
-.center-section {
-  text-align: center;
-  padding: 40px 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* ================= BUTTON POLISH ================= */
-.btn {
-  padding: 10px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  border: 1px solid #1f1f1f;
-  color: #f5f5f5;
-  transition: 0.2s ease;
-}
-
-.btn.primary {
-  background: #f9a8d4;
-  color: black;
-  border: none;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  border-color: #f9a8d4;
-}
-
-/* buttons spacing */
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-/* mobile fix */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-}
-
 /* ================= BASE ================= */
 * {
   box-sizing: border-box;
@@ -153,16 +7,9 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Inter', sans-serif;
   background: #0a0a0a;
   color: #f5f5f5;
-}
-
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 60px 20px;
 }
 
 /* ================= NAV ================= */
@@ -187,153 +34,103 @@ nav a:hover {
   color: #f472b6;
 }
 
-/* ================= GRID ================= */
+/* ================= LAYOUT ================= */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* ================= UNIFIED CARDS ================= */
-.card,
-.project-card {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  border-radius: 16px;
-  padding: 18px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease;
-}
-
-.card:hover,
-.project-card:hover {
-  transform: translateY(-6px);
-  border-color: #f9a8d4;
-  box-shadow: 0 0 25px rgba(249,168,212,0.25);
-}
-
-/* soft glow overlay */
-.card::before,
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, rgba(249,168,212,0.15), transparent 60%);
-  opacity: 0;
-  transition: 0.3s ease;
-}
-
-.card:hover::before,
-.project-card:hover::before {
-  opacity: 1;
-}
-
-/* ================= PROJECT IMAGE ================= */
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* ================= EMBED FRAME ================= */
-.project-frame {
-  width: 100%;
-  height: 220px;
-  border: none;
-}
-
-/* ================= PROJECT CONTENT ================= */
-.project-content {
-  padding: 18px;
-}
-
-.project-content h3 {
-  margin: 0 0 10px;
-}
-
-.project-content p {
-  color: #b5b5b5;
-  margin-bottom: 12px;
-}
-
-/* ================= TAGS ================= */
-.tags {
+/* ================= HERO ================= */
+.hero-wrapper {
+  min-height: calc(100vh - 70px);
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.tags span {
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(249,168,212,0.15);
+.hero {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.subtitle {
   color: #f9a8d4;
 }
 
-/* ================= DESIGN CARDS (FIXED GRID) ================= */
+/* ================= ABOUT ================= */
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.about-card {
+  max-width: 800px;
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.pink-divider {
+  width: 60px;
+  height: 3px;
+  background: #f9a8d4;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+
+/* ================= CARDS (UNIFIED) ================= */
+.card,
+.project-card,
 .design-card {
   background: #111;
   border: 1px solid #1f1f1f;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
+  padding: 18px;
   transition: 0.3s ease;
-  cursor: pointer;
+  position: relative;
 }
 
-/* image fix (THIS STOPS HUGE STRETCH ISSUE) */
-.design-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-/* hover glow */
+.card:hover,
+.project-card:hover,
 .design-card:hover {
   transform: translateY(-6px);
   border-color: #f9a8d4;
   box-shadow: 0 0 25px rgba(249,168,212,0.25);
 }
 
-/* ================= ANIMATION ================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  transition: all 0.7s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* ================= BUTTONS ================= */
-.btn {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 14px;
-  text-decoration: none;
-
-  background: #111;
-  color: #f5f5f5;
-  border: 1px solid #1f1f1f;
-
-  transition: 0.2s ease;
-}
-
-.btn.primary {
-  background: #f9a8d4;
-  color: black;
+/* ================= IMAGES ================= */
+.project-frame {
+  width: 100%;
+  height: 220px;
   border: none;
+  border-radius: 12px;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  border-color: #f9a8d4;
+.design-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 /* ================= TAGS ================= */
@@ -352,27 +149,30 @@ nav a:hover {
   color: #f9a8d4;
 }
 
-/* ================= PROJECT EMBED ================= */
-.project-frame {
-  width: 100%;
-  height: 220px;
-  border: none;
-  border-radius: 12px;
-}
-
-/* ================= RESUME TIMELINE ================= */
-.resume-category {
-  margin-bottom: 40px;
-}
-
-.pink-divider {
-  width: 60px;
-  height: 3px;
-  background: #f9a8d4;
-  margin: 8px 0 15px;
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
   border-radius: 10px;
+  text-decoration: none;
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #1f1f1f;
+  transition: 0.2s ease;
 }
 
+.btn.primary {
+  background: #f9a8d4;
+  color: black;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: #f9a8d4;
+}
+
+/* ================= RESUME ================= */
 .timeline {
   position: relative;
   padding-left: 20px;
@@ -409,42 +209,20 @@ nav a:hover {
   background: #111;
   border-radius: 14px;
   border: 1px solid #1f1f1f;
-  transition: 0.3s ease;
 }
 
-.glow-card:hover .timeline-content {
-  border-color: #f9a8d4;
-  box-shadow: 0 0 25px rgba(249,168,212,0.25);
-  transform: translateY(-4px);
-}
-
-/* ================= DESIGN LIGHTBOX ================= */
-.design-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-.design-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-/* FIXED LIGHTBOX */
+/* ================= LIGHTBOX ================= */
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
+  z-index: 9999;
 }
 
 .lightbox.active {
@@ -453,55 +231,9 @@ nav a:hover {
 }
 
 .lightbox img {
-  max-width: 85vw;
-  max-height: 85vh;
+  max-width: 90vw;
+  max-height: 90vh;
   object-fit: contain;
-  border-radius: 14px;
-}
-
-/* ================= PROJECT CARD GLOW ================= */
-.project-card {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: 0.3s ease;
-  position: relative;
-}
-
-/* glow effect */
-.project-card:hover {
-  transform: translateY(-6px);
-  border-color: #f9a8d4;
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.4),
-    0 0 25px rgba(249,168,212,0.25);
-}
-
-/* subtle pink light overlay */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: radial-gradient(circle at top, rgba(249,168,212,0.15), transparent 60%);
-  opacity: 0;
-  transition: 0.3s ease;
-}
-
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  transition: all 0.7s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 /* ================= ANIMATION ================= */
