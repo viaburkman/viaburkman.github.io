@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
+header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  max-width: 600px;
+  color: #9ca3af;
+}
+
 /* ================= BASE ================= */
 * {
   box-sizing: border-box;
@@ -124,6 +143,31 @@ nav a:hover {
   border-radius: 999px;
   background: rgba(249,168,212,0.15);
   color: #f9a8d4;
+}
+
+/* ================= DESIGN CARDS (FIXED GRID) ================= */
+.design-card {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* image fix (THIS STOPS HUGE STRETCH ISSUE) */
+.design-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* hover glow */
+.design-card:hover {
+  transform: translateY(-6px);
+  border-color: #f9a8d4;
+  box-shadow: 0 0 25px rgba(249,168,212,0.25);
 }
 
 /* ================= ANIMATION ================= */
