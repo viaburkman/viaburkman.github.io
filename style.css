@@ -82,6 +82,62 @@ nav a:hover {
   opacity: 1;
 }
 
+/* ================= PROJECT IMAGE ================= */
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ================= EMBED FRAME ================= */
+.project-frame {
+  width: 100%;
+  height: 220px;
+  border: none;
+}
+
+/* ================= PROJECT CONTENT ================= */
+.project-content {
+  padding: 18px;
+}
+
+.project-content h3 {
+  margin: 0 0 10px;
+}
+
+.project-content p {
+  color: #b5b5b5;
+  margin-bottom: 12px;
+}
+
+/* ================= TAGS ================= */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(249,168,212,0.15);
+  color: #f9a8d4;
+}
+
+/* ================= ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: all 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* ================= BUTTONS ================= */
 .btn {
   display: inline-block;
@@ -229,6 +285,51 @@ nav a:hover {
   max-height: 85vh;
   object-fit: contain;
   border-radius: 14px;
+}
+
+/* ================= PROJECT CARD GLOW ================= */
+.project-card {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* glow effect */
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #f9a8d4;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.4),
+    0 0 25px rgba(249,168,212,0.25);
+}
+
+/* subtle pink light overlay */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at top, rgba(249,168,212,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: all 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ================= ANIMATION ================= */
